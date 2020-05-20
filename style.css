@@ -1,0 +1,46 @@
+html {
+  width: 100%;
+  margin: 0%;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  display: table;
+  font-family: Montserrat;
+}
+.preloader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+}
+
+path {
+  stroke: #ffffff;
+  fill: #fff;
+  stroke-dasharray: 1000;
+  opacity: 10;
+  animation: animate 3s infinite cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+@keyframes animate {
+  30% {
+    opacity: 0;
+    fill: none;
+    stroke-dashoffset: 1000;
+  }
+
+  90% {
+    fill: rgba(255, 255, 255, 0);
+  }
+  100% {
+    opacity: 10;
+    fill: rgba(255, 255, 255, 1);
+    stroke-dashoffset: 0;
+  }
+}
